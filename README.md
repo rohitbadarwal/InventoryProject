@@ -6,5 +6,5 @@ NOTE : PLEASE run 'npm install' in the terminal to install the required librarie
 - Download the code to root directory.
 - Run 'npm install' in your terminal.
 - First run 'node seeds.js' and then,
-- Run 'node index.js' or 'nodemon index.js'.
+- Run 'nodemon index.js'.
 - Open browser and go to 'localhost:8080

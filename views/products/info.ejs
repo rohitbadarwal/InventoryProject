@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= foundProd.name %>
+    </title>
+    <%- include('../partials/bootstrap'); %>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1>
+                    <%= foundProd.name %>
+                </h1>
+                <ul>
+                    <li>
+                        <b>Price</b> - &#8377 <%= foundProd.price %>
+                    </li>
+                    <li>
+                        <b>Type</b> - <%= foundProd.category %>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-5">
+                <button class="btn btn-primary"><a style="text-decoration: none; color:white" href="/products">All
+                        Products</a></button>
+                <button class="btn btn-success"><a style="text-decoration: none; color:white"
+                        href="/products/<%= foundProd._id %>/edit">Edit</a></button>
+                <button class="btn btn-danger"><a style="text-decoration: none; color:white"
+                        href="/products/<%= foundProd._id %>/delete">Delete</a></button>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Farm</title>
+    <%- include('../partials/bootstrap'); %>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-2">Add a new Farm</h1>
+        <form action="/farms" method="POST" autocomplete="off">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="name">Farm Name : </label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Farm Name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="city">City : </label>
+                    <input class="form-control" type="text" name="city" id="city" placeholder="City">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="email">Email :</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="lorem@ipsum.com">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Add Farm</button>
+            <a class="btn btn-danger" style="text-decoration: none; color:white" href="/products">Back</a>
+        </form>
+    </div>
+</body>
+
+</html>

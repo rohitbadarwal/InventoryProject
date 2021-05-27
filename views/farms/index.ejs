@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Farms</title>
+    <%- include('../partials/bootstrap'); %>
+</head>
+
+<body>
+    <div>
+        <h1>All Farms!!</h1>
+        <ul>
+            <% for(let n of findFarm) { %>
+                <li>
+                    <a href="/farms/<%= n._id %> ">
+                        <%= n.name %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+        <a class="btn btn-success" style="text-decoration: none; color:white" href="/farms/new">Add Farm</a>
+        <a class="btn btn-primary" style="text-decoration: none; color:white" href="/">Home</a>
+    </div>
+</body>
+
+</html>

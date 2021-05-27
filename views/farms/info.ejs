@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= foundFarm.name %>
+    </title>
+    <%- include('../partials/bootstrap'); %>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1>
+                    <%= foundFarm.name %>
+                </h1>
+                <ul>
+                    <li>
+                        <b>City</b>
+                        <%= foundFarm.city %>
+                    </li>
+                    <li>
+                        <b>Email</b> - <%= foundFarm.email %>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1>Products available: </h1>
+                <ul>
+                    <% for(let n of form.products) { %>
+                        <li>
+                            <a href="/products/<%=n.id%>">
+                                <%= n.name %>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a class="btn btn-info ml-5" style="text-decoration: none; color:white"
+                    href="/farms/<%= foundFarm._id %>/edit">Edit</a>
+                <a class="btn btn-danger" style="text-decoration: none; color:white"
+                    href="/farms/<%= foundFarm._id %>/delete">Delete</a>
+                <a class="btn btn-success" style="text-decoration: none; color:white"
+                    href="/farms/<%= foundFarm._id %>/products/new">Add Product to <%= foundFarm.name %></a>
+                <a class="btn btn-primary" style="text-decoration: none; color:white" href="/farms">All
+                    Farms</a>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+    </div>
+</body>
+
+</html>

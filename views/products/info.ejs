@@ -26,15 +26,23 @@
                     <li>
                         <b>Type</b> - <%= foundProd.category %>
                     </li>
+                    <li>
+                        <b>Farm</b> -<a href="/farms/<%=form.farm._id%>">
+                            <%= form.farm.name %>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="col-md-5"></div>
+            <div class=" col-md-5">
+            </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-5">
                 <a class="btn btn-primary" style="text-decoration: none; color:white" href="/products">All
                     Products</a>
+                <a class="btn btn-info" style="text-decoration: none; color:white" href="/farms">All
+                    Farms</a>
                 <a class="btn btn-success" style="text-decoration: none; color:white"
                     href="/products/<%= foundProd._id %>/edit">Edit</a>
                 <a class="btn btn-danger" style="text-decoration: none; color:white"
